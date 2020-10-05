@@ -34,7 +34,7 @@ namespace SharedLibraries.Services
                
                 _client = new HttpClient(); 
                
-                var response = await _client.GetAsync("http://api.openweathermap.org/data/2.5/weather?q=Kumla,se&APPID=340a1c7e1eb2c2fac4b365398b20c7e8");
+                var response = await _client.GetAsync("http://api.openweathermap.org/data/2.5/weather?q=Kumla,se&APPID=");// Tog bort nyckel
                 var data = JsonConvert.DeserializeObject<TemperatureModel>(await response.Content.ReadAsStringAsync());
                 var weather = new WeatherModel
                 {
